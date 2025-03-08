@@ -1,0 +1,65 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #2C3E50, #34495E); /* Professional dark gradient */
+    color: #ECF0F1; /* Soft white */
+    text-align: center;
+    padding: 18px 0;
+    font-size: 14px;
+    font-family: 'Lora', serif; /* Professional and elegant font */
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.35);
+    z-index: 100;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer p {
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+  }
+  
+  .highlight {
+    font-weight: 700;
+    color: #F39C12; /* Elegant gold */
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #F39C12, rgba(255, 255, 255, 0));
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 16px 0;
+      font-size: 13px;
+    }
+  
+    .highlight {
+      letter-spacing: 1.1px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .footer {
+      padding: 14px 0;
+      font-size: 12px;
+    }
+  
+    .highlight {
+      letter-spacing: 1px;
+    }
+  }
+  
