@@ -65,30 +65,42 @@ body {
 /* Grid layout for larger screens */
 .company-content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Two equal columns */
   gap: 15px;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure inputs don't overflow */
+.company-content .input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
 }
 
 .input-group {
   display: flex;
-  align-items: center;
-  gap: 10px; /* Spacing between label and input */
+  flex-direction: column; /* Default: Stack label above input */
   width: 100%;
 }
 
 .input-group label {
   font-size: 14px;
   font-weight: 600;
-  color: #2C3E50; /* Professional dark gray */
-  width: 150px; /* Consistent width for alignment */
-  text-align: right; /* Align text to right for uniformity */
+  color: #2C3E50;
+  margin-bottom: 5px; /* Space between label and input */
 }
 
+/* Input fields */
 .input {
-  flex: 1; /* Ensures input takes remaining space */
-  padding: 10px;
-  border: 1px solid #ccc;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 14px;
   background-color: #f9f9f9;
@@ -186,6 +198,7 @@ body {
   .container {
     width: 95%;
     padding: 15px;
+    padding-bottom: 5rem;
   }
 
   .company-content {
@@ -194,6 +207,26 @@ body {
 
   .card-content {
     grid-template-columns: 1fr; /* Stack inputs on smaller screens */
+  }
+
+  .input-group {
+    flex-direction: row; /* Side-by-side for larger screens */
+    align-items: center;
+  }
+
+  .input-group label {
+    width: 150px; /* Fixed width for alignment */
+    margin-bottom: 0;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  .input {
+    flex: 1; /* Input takes remaining space */
+  }
+
+  .company-details {
+    padding: 15px;
   }
 
   .remove-button {
