@@ -32,7 +32,11 @@ export default function QuotationMaker() {
 
   return (
     <div className="container">
-      <h1 className="title">Quotation Management System</h1>
+      <h1 className="title">
+      <span style={{ color: 'red' }}>Q</span>uote 
+      <span style={{ color: 'green' }}> M</span>aster
+      </h1>
+
       <div className="company-details card">
   <div className="company-content">
     <div className="input-group">

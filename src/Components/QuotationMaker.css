@@ -1,4 +1,5 @@
-/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -21,13 +22,15 @@ body {
 /* Title */
 .title {
   text-align: center;
-  font-size: 26px; /* Slightly larger for better emphasis */
-  font-weight: 700; /* Stronger weight for a bold and professional look */
+  font-size: 35px; /* Slightly larger for better emphasis */
+  
   margin-bottom: 20px;
-  font-family: "Merriweather", serif; /* Elegant and professional serif font */
+  font-family: "Righteous", sans-serif;
+  font-weight: 700;
+  font-style: normal;/* Elegant and professional serif font */
   color: #2C3E50; /* Deep blue-gray for a sophisticated look */
-  text-transform: uppercase; /* Adds a more formal style */
-
+  /* text-transform: uppercase;  */
+  font-family: "Lilita One", sans-serif;
   position: relative;
   padding-bottom: 10px;
 }
@@ -114,7 +117,7 @@ body {
 /* Input fields */
 .company-content .input,
 .card-content .input {
-  /* width: 100%; */
+  width: 90%;
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 5px;
